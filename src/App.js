@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Header from './components/Header/Header'
+import Navigation from './components/Navigation/Navigation'
+import Pages from './components/Pages'
+import homeBackground from './assets/home/background-home-desktop.jpg'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+   const data = require('./data.json')
+   const [background, setBackground] = useState(homeBackground)
+   const changeBackgroundHandler = bg => {
+      setBackground(bg)
+   }
+   return (
+      <div className='container' style={{ backgroundImage: `url(${background})` }}>
+         <Header>
+            <Navigation onChangeBackground={changeBackgroundHandler} />
+         </Header>
+         <Pages pageData={data} />
+      </div>
+   )
 }
 
-export default App;
+export default App

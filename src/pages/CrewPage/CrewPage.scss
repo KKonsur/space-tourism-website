@@ -1,0 +1,141 @@
+.crew {
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
+   min-height: calc(100vh - 8.6rem);
+   padding: 0 3vw;
+
+   @media (max-width: 780px) {
+      position: relative;
+   }
+
+   &__heading {
+      font-weight: normal;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      padding-left: 5vw;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+
+      @media (max-width: 780px) {
+         margin: 2rem 0;
+      }
+
+      span {
+         display: inline-block;
+         margin-right: 1rem;
+         color: rgba(255, 255, 255, 0.636);
+      }
+   }
+
+   &__content-box {
+      display: flex;
+      position: relative;
+      padding: 0 5vw;
+
+      @media (max-width: 780px) {
+         justify-content: center;
+         align-items: center;
+      }
+   }
+
+   &__info {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      width: 50%;
+      min-height: 60vh;
+
+      @media (max-width: 780px) {
+         margin: 3rem 0;
+         min-height: auto;
+         width: 100%;
+         align-items: center;
+      }
+   }
+
+   &__person {
+      font-family: 'Bellefair', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      text-transform: uppercase;
+
+      @media (max-width: 780px) {
+         text-align: center;
+      }
+   }
+
+   &__role {
+      color: rgba(255, 255, 255, 0.636);
+      font-size: clamp(1.6rem, 2vw, 1.7rem);
+      margin-bottom: 3vh;
+
+      @media (max-width: 780px) {
+         text-align: center;
+      }
+   }
+
+   &__bio {
+      font-size: clamp(1rem, 1.1vw, 1.5rem);
+      margin-top: 6vh;
+      font-weight: normal;
+      font-family: 'Barlow', sans-serif;
+      color: #d2d8f9;
+      padding-right: 8vw;
+      line-height: 1.4rem;
+
+      @media (max-width: 780px) {
+         padding: 0;
+         text-align: center;
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      width: clamp(150px, 15vw, 160px);
+      justify-content: space-between;
+      margin-top: 5rem;
+
+      button {
+         width: 1.3rem;
+         height: 1.3rem;
+         border-radius: 100%;
+         border: none;
+         background-color: rgba(255, 255, 255, 0.401);
+         cursor: pointer;
+         transition: 0.2s;
+
+         &:hover {
+            background-color: #fff;
+         }
+      }
+      .active-crew-button {
+         background-color: #fff;
+      }
+   }
+
+   &__image-box {
+      align-self: flex-end;
+      width: 50%;
+      min-height: inherit;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 780px) {
+         position: relative;
+         min-height: auto;
+         align-self: center;
+      }
+
+      img {
+         position: absolute;
+         height: clamp(500px, 35vw, 900px);
+         bottom: 0;
+
+         @media (max-width: 780px) {
+            position: static;
+            margin-top: 2rem;
+         }
+      }
+   }
+}
