@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Barlow Condensed', sans-serif;
+   color: white;
+}
+
+.container {
+   min-height: 100vh;
+   overflow: hidden;
+
+   &--home {
+      background: url('./assets/home/background-home-desktop.jpg') no-repeat;
+      background-size: cover;
+
+      @media (max-width: 780px) {
+         background: url('./assets/home/background-home-mobile.jpg') no-repeat;
+         background-size: cover;
+      }
+   }
+
+   &--destination {
+      background: url('./assets/destination/background-destination-desktop.jpg') no-repeat;
+      background-size: cover;
+
+      @media (max-width: 780px) {
+         background: url('./assets/destination/background-destination-mobile.jpg') no-repeat;
+         background-size: cover;
+      }
+   }
+
+   &--crew {
+      background: url('./assets/crew/background-crew-desktop.jpg') no-repeat;
+      background-size: cover;
+
+      @media (max-width: 780px) {
+         background: url('./assets/crew/background-crew-mobile.jpg') no-repeat;
+         background-size: cover;
+      }
+   }
+
+   &--technology {
+      background: url('./assets/technology/background-technology-desktop.jpg') no-repeat;
+      background-size: cover;
+
+      @media (max-width: 780px) {
+         background: url('./assets/technology/background-technology-mobile.jpg') no-repeat;
+         background-size: cover;
+      }
+   }
+}

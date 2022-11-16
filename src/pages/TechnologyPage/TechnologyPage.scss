@@ -1,0 +1,157 @@
+.technology {
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
+   min-height: calc(100vh - 8.6rem);
+   padding: 0 3vw;
+   position: relative;
+   overflow: hidden;
+
+   &__heading {
+      font-weight: normal;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      padding-left: 5vw;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+
+      @media (max-width: 780px) {
+         margin: 2rem 0;
+      }
+
+      span {
+         display: inline-block;
+         margin-right: 1rem;
+         color: rgba(255, 255, 255, 0.636);
+      }
+   }
+
+   &__content-box {
+      display: flex;
+      align-items: center;
+      min-height: 60vh;
+      padding: 0 4vw;
+
+      @media (max-width: 780px) {
+         flex-direction: column-reverse;
+         justify-content: space-between;
+      }
+   }
+
+   &__content {
+      display: flex;
+      width: 60%;
+
+      @media (max-width: 780px) {
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+         margin-top: 3rem;
+         margin-bottom: 2rem;
+      }
+   }
+
+   &__text-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 4rem;
+
+      @media (max-width: 780px) {
+         margin: 0;
+      }
+   }
+
+   &__name {
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      margin-bottom: 1rem;
+      font-family: 'Bellefair';
+      text-transform: uppercase;
+
+      @media (max-width: 780px) {
+         text-align: center;
+      }
+
+      span {
+         display: block;
+         font-size: clamp(1rem, 2vw, 1.2rem);
+         font-family: 'Barlow Condensed';
+         font-weight: normal;
+         color: #d2d8f9;
+         margin-bottom: 0.5rem;
+      }
+   }
+
+   &__description {
+      font-size: clamp(1.2rem, 2vw, 1.3rem);
+      line-height: 2rem;
+      color: #d2d8f9;
+
+      @media (max-width: 780px) {
+         text-align: center;
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 35vh;
+
+      @media (max-width: 780px) {
+         flex-direction: row;
+         min-height: auto;
+         width: 80%;
+         align-items: center;
+         margin-bottom: 3rem;
+      }
+
+      button {
+         width: clamp(3.5rem, 5vw, 5rem);
+         height: clamp(3.5rem, 5vw, 5rem);
+         border-radius: 100%;
+         font-size: clamp(1rem, 2vw, 3rem);
+         font-family: 'Bellefair';
+         background: transparent;
+         color: #fff;
+         border: 1px solid rgba(255, 255, 255, 0.636);
+         cursor: pointer;
+         transition: 0.2s;
+
+         &:hover {
+            color: #000;
+            border: 1px solid #fff;
+            background-color: #fff;
+         }
+      }
+   }
+
+   .technology-active-button {
+      color: #000;
+      border: 1px solid #fff;
+      background-color: #fff;
+   }
+
+   &__image-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      position: absolute;
+      right: 0;
+
+      @media (max-width: 780px) {
+         position: relative;
+      }
+
+      img {
+         position: absolute;
+         width: 80%;
+         right: 0;
+
+         @media (max-width: 780px) {
+            position: static;
+            width: 100vh;
+         }
+      }
+   }
+}
